@@ -12,13 +12,18 @@ h2{
 
 .Recipient{
     margin-top: 1rem;
-    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     .Details{
         margin-top: 1rem;
+    }
+
+    .menus{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
 

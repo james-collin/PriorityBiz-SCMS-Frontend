@@ -209,7 +209,7 @@ const Home = (props) => {
                                         })()
                                     }</TableCell>
                                     <TableCell align="center"><Link style={{ textDecoration: 'none', color: 'blue' }} target="_blank" to={`/picking-slip/${o._id}`}>Packing Slip</Link></TableCell>
-                                    <TableCell align="center"><Link style={{ textDecoration: 'none', color: 'blue' }} target="_blank" to={`/picking-ticket/${o._id}`}>Packing Ticket</Link></TableCell>
+                                    <TableCell align="center"><Link style={{ textDecoration: 'none', color: 'blue' }} target="_blank" to={`/picking-ticket/${o._id}`}>Pick Ticket</Link></TableCell>
                                     {role === 'superadmin' || role === 'warehouse' ? <TableCell align="center"><Button variant="contained" color="primary" onClick={e => postShip(e, o._id)}>Ship</Button></TableCell> : null}
                                     <TableCell align="center">{
                                         (() => {

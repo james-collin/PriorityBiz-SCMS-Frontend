@@ -14,6 +14,8 @@ import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
 // Axios
 import axios from 'axios';
 // Material UI Styles
@@ -34,25 +36,28 @@ const CreateOrder = () => {
     const history = useHistory();
     // State consts
     const [reci, setReci] = useState(null);
-    const [page, setPage] = useState(1)
-    // Redux State getters
-    const recipients = useSelector(state => state.recipients.recipients)
-    const pages = useSelector(state => Math.ceil(state.recipients.total / 10))
+    // const [page, setPage] = useState(1)
+    const [searchedRecipients, setSearchedRecipients] = useState([])
+    // // Redux State getters
+    // const recipients = useSelector(state => state.recipients.recipients)
+    // const pages = useSelector(state => Math.ceil(state.recipients.total / 10))
     // useEffect hook to Fetch recipients
-    useEffect(() => {
-        dispatch(actions.getRecipients(page))
-    }, [page])
+    // useEffect(() => {
+    //     dispatch(actions.getRecipients(page))
+    // }, [page])
 
 
     const handleChangeReci = (e) => {
-        setReci(recipients.find(p => p._id === e.target.value))
+        console.log('rasr')
+        setReci(searchedRecipients.find(p => p._id === e.target.value))
+        console.log(reci)
 
     }
 
     const goCreateRec = () => {
         history.push('/recipient/add-update/null')
     }
-    
+
     // Function to create order and save the response then navigate to next page
     const goOrders = (id) => {
         axios.post('/order/add-update', {
@@ -69,6 +74,13 @@ const CreateOrder = () => {
             })
     }
 
+    const searchReceipients = (e) => {
+        axios.get(`/recipient/api/search?search=${e.target.value}`)
+        .then(res => {
+            console.log(res)
+            setSearchedRecipients(res.data.data)
+        })
+    }
 
     return (
         <div className={classes.Container}>
@@ -77,7 +89,7 @@ const CreateOrder = () => {
                 <p>Or select existing recipient</p>
                 <h2>Recipient</h2>
                 <div className={classes.menus}>
-                    <FormControl className={matClasses.formControl}>
+                    {/* <FormControl className={matClasses.formControl}>
                         <InputLabel id="demo-simple-select-label">Recipient</InputLabel>
                         <Select
                             labelId="demo-simple-select-placeholder-label-label"
@@ -102,7 +114,19 @@ const CreateOrder = () => {
                                 <MenuItem key={index} value={index+1}>{index+1}</MenuItem>
                             )))}
                         </Select>
-                    </FormControl>
+                    </FormControl> */                    
+                    }
+                    <TextField id="standard-basic" label="Search Recipients" onChange={e => searchReceipients(e)}/>
+                    <Select
+                            labelId="demo-simple-select-placeholder-label-label"
+                            id="demo-simple-select-placeholder-label"
+                            onChange={handleChangeReci}
+                            className={matClasses.selectEmpty}
+                        >
+                            {searchedRecipients.map((reci => (
+                                <MenuItem key={reci._id} value={reci._id}>{reci.name ? `${reci.name} ${reci.contact} ${reci.street1}` : `${reci.contact} ${reci.street1}`}</MenuItem>
+                            )))}
+                        </Select>
                 </div>
 
                 {reci ? (<div className={classes.Details}>
