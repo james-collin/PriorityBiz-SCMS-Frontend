@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/PriorityBiz-SCMS-Frontend/static/css/main.ebeb6895.chunk.css",
-    "main.js": "/PriorityBiz-SCMS-Frontend/static/js/main.0175bb7d.chunk.js",
-    "main.js.map": "/PriorityBiz-SCMS-Frontend/static/js/main.0175bb7d.chunk.js.map",
-    "runtime-main.js": "/PriorityBiz-SCMS-Frontend/static/js/runtime-main.789a8896.js",
-    "runtime-main.js.map": "/PriorityBiz-SCMS-Frontend/static/js/runtime-main.789a8896.js.map",
-    "static/js/2.3591ef0b.chunk.js": "/PriorityBiz-SCMS-Frontend/static/js/2.3591ef0b.chunk.js",
-    "static/js/2.3591ef0b.chunk.js.map": "/PriorityBiz-SCMS-Frontend/static/js/2.3591ef0b.chunk.js.map",
-    "static/js/3.d507c6f7.chunk.js": "/PriorityBiz-SCMS-Frontend/static/js/3.d507c6f7.chunk.js",
-    "static/js/3.d507c6f7.chunk.js.map": "/PriorityBiz-SCMS-Frontend/static/js/3.d507c6f7.chunk.js.map",
+    "main.css": "/PriorityBiz-SCMS-Frontend/static/css/main.91549eda.chunk.css",
+    "main.js": "/PriorityBiz-SCMS-Frontend/static/js/main.ddba1dbd.chunk.js",
+    "main.js.map": "/PriorityBiz-SCMS-Frontend/static/js/main.ddba1dbd.chunk.js.map",
+    "runtime-main.js": "/PriorityBiz-SCMS-Frontend/static/js/runtime-main.7fc5142b.js",
+    "runtime-main.js.map": "/PriorityBiz-SCMS-Frontend/static/js/runtime-main.7fc5142b.js.map",
+    "static/js/2.87c39241.chunk.js": "/PriorityBiz-SCMS-Frontend/static/js/2.87c39241.chunk.js",
+    "static/js/2.87c39241.chunk.js.map": "/PriorityBiz-SCMS-Frontend/static/js/2.87c39241.chunk.js.map",
+    "static/js/3.5d9a3231.chunk.js": "/PriorityBiz-SCMS-Frontend/static/js/3.5d9a3231.chunk.js",
+    "static/js/3.5d9a3231.chunk.js.map": "/PriorityBiz-SCMS-Frontend/static/js/3.5d9a3231.chunk.js.map",
     "index.html": "/PriorityBiz-SCMS-Frontend/index.html",
-    "static/css/main.ebeb6895.chunk.css.map": "/PriorityBiz-SCMS-Frontend/static/css/main.ebeb6895.chunk.css.map",
-    "static/js/2.3591ef0b.chunk.js.LICENSE.txt": "/PriorityBiz-SCMS-Frontend/static/js/2.3591ef0b.chunk.js.LICENSE.txt"
+    "static/css/main.91549eda.chunk.css.map": "/PriorityBiz-SCMS-Frontend/static/css/main.91549eda.chunk.css.map",
+    "static/js/2.87c39241.chunk.js.LICENSE.txt": "/PriorityBiz-SCMS-Frontend/static/js/2.87c39241.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.789a8896.js",
-    "static/js/2.3591ef0b.chunk.js",
-    "static/css/main.ebeb6895.chunk.css",
-    "static/js/main.0175bb7d.chunk.js"
+    "static/js/runtime-main.7fc5142b.js",
+    "static/js/2.87c39241.chunk.js",
+    "static/css/main.91549eda.chunk.css",
+    "static/js/main.ddba1dbd.chunk.js"
   ]
 }
